@@ -3,45 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta type="description" content="A quiz that tests knowledge about dogs">
+    <meta name="description" content="Dog Quiz App"> 
     <title>Dog Quiz App</title>
     <link rel="stylesheet" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
+
 <body>
     <header role="banner" class="header">
-        <section>
-            <img class="dog-banner" src="images/dog banner.jpg" alt="row of dogs">
-        </section> 
-        <section>
-            <ul>
-                <li>Question:
-                    <span class="question-number">0</span>/10
-                </li>
-                <li>Score:
-                    <span class="score">0</span>
-                </li>
-            </ul>
-        </section>       
+        <img src="Images/dog banner.jpg" alt="picture of dogs in a banner form" class="dog-banner">
+        <ul>
+            <li>Question: <span class="questionNumber">0</span>/5</li>
+            <li>Score: <span class="scoreNumber">0</span></li>
+        </ul>
     </header>
 
     <main role="main">
-        <fieldset>
-            <div>
-                <legend>
-                How much do you know about "man's bestfriend?"
-                </legend>
-                <p>
-                This quiz will test your knowledge about dogs.
-                </p>
-            </div>
-            <div>
-                <button type="button" id="start-button">
-                    Start Quiz
-                </button>
-            </div>
-        </fieldset>
-        
-    </main>
-    
+        <div class="startQuiz">
+            <h1>How well do you know "man's bestfriend"?</h1>
+            <button type="button" id="startButton">Start Quiz</button>
+        </div>
+        <div class="questionForm"></div>
+    </main>    
+    <script src="STORE.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
