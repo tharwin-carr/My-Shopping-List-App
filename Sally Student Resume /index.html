@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sally Student</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id='application-root'></div>
+    <main id='main-info'>
+        <address id='address'></address>
+        <section id='education'></section>
+        <section id='experience'></section>
+    </main>
+
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type='text/babel'>
+        function App(header) {
+            console.log(header)
+            return (
+                <header>
+                    {header.children}
+                </header>
+            );
+    }
+
+        ReactDOM.render(
+            <App className='title'>
+                <h1>Sally Student Resume</h1>
+            </App>,
+            document.querySelector('#application-root')
+        );
+
+        function App(address) {
+            console.log(address)
+            return(
+                <address>
+                    {address.children}
+                </address>
+            );
+        }
+
+        ReactDOM.render(
+            <App className='my-address'>
+                <div>
+                    <p>Name: Sally Student</p>
+                    <a href='mailto: sallystudent@bloc.io'>sallystudent@bloc.io</a>
+                    <p>Phone: 555-123-4567</p>
+                    <img src='https://ia.media-imdb.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_UX214_CR0,0,214,317_AL_.jpg' alt='picture of sally' width='250' height='350'></img>
+                </div>
+            </App>,
+            document.querySelector('#address')
+        );
+
+        function App(section){
+            console.log(section)
+            return (
+                <section>
+                    {section.chlidren}
+                    </section>
+            );
+        }
+
+        ReactDOM.render(
+            <App className='my-education'>
+                <div>
+                    <h2>Education</h2>
+                    <ul>
+                        <li>University of Southern California</li>
+                        <li>Bloc</li>
+                    </ul>
+                </div>
+            </App>,
+            document.querySelector('#education')
+        );
+
+        function App(section1){
+            console.log(section1)
+            return (
+                <section>
+                    {section1.children}
+                </section>
+            );
+        }
+
+        ReactDOM.render(
+            <App className='my-experience'>
+                <div>
+                    <h2>
+                        Employment History
+                    </h2>
+                    <ul>
+                        <li>
+                            Company Name: MSI
+                        </li>
+                        <li>
+                            Job Title: Greeter
+                        </li>
+                        <li>
+                            Dates of Employment: 2017-2018
+                        </li>
+                        <li>
+                            Job Description:Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pulvinar sodales quam non consectetur. Aenean sit amet massa auctor, dictum ipsum in, congue sapien. Curabitur pretium pretium diam at accumsan.
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li>
+                            Company Name: Wally World
+                        </li>
+                        <li>
+                            Job Title: Cashier
+                        </li>
+                        <li>
+                            Dates of Employment: 2018-Present
+                        </li>
+                        <li>
+                            Job Description:Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pulvinar sodales quam non consectetur. Aenean sit amet massa auctor, dictum ipsum in, congue sapien. Curabitur pretium pretium diam at accumsan.
+                        </li>
+                    </ul>
+                    </div>
+                    </App>,
+                    document.querySelector('#experience')
+        );
+
+
+    </script>
+    
+</body>
+</html>
